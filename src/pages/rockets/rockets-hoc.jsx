@@ -6,20 +6,20 @@ import Loading from "../../components/loading/loading.jsx"
 
 import { ROCKET_INFO } from "../../graphql/resolvers.js"
 
-import { client } from "../../graphql/client.js"
+import { cache } from "../../graphql/client.js"
 
 
 const RocketsHoc = () => {
     return (
         <Query query={ROCKET_INFO}>
             {({ loading, error, data }) => {
-                client.writeData({
+                cache.writeData({
                     data: {
                         rockets: data
                     }
                 })
                 if (loading) return <Loading />
-                else return <Rockets rockets={data.rockets} />
+                else return <Rockets rockets={data.rockets} key={data.rockets} />
             }
             }
         </Query>

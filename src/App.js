@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import './App.css';
 
 import Header from "./components/header/header.jsx"
+import Loading from "./components/loading/loading.jsx"
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.jsx"))
 const RocketsHoc = lazy(() => import("./pages/rockets/rockets-hoc.jsx"))
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <Fragment>
       <Header />
-      <Suspense fallback={"loading..."}>
+      <Suspense fallback={<Loading />}>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/rockets" component={RocketsHoc} />
         <Route exact path="/missions" component={MissionsHoc} />

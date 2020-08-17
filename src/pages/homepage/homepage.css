@@ -1,6 +1,23 @@
-.Links {
+.links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 50px;
+    margin: 65px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+    .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .link {
+        font-size: 20px;
+    }
 }

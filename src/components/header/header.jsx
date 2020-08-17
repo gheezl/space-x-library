@@ -11,7 +11,7 @@ const Header = () => {
                     <span >Space X Library</span>
                 </div>
                 <div className="about">
-                    <span>About</span>
+                    <span>About ☰</span>
                 </div>
             </div>
         </Fragment>

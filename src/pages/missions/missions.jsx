@@ -6,13 +6,12 @@ const Card = lazy(() => import("../../components/card/card.jsx"))
 
 
 const Missions = ({ missions }) => {
-    console.log(missions)
     return (
         <Fragment>
             <div className="mission-border">
                 {
                     missions.map(mission => (
-                        <Card props={mission.name} />
+                        <Card props={mission.name} key={missions.name} />
                     ))
                 }
             </div>
