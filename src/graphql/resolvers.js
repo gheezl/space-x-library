@@ -18,7 +18,7 @@ export const GET_ROCKETS = gql`
 
 // querys from the database
 
-const ROCKET_INFO = gql`
+export const ROCKET_INFO = gql`
     {
         rockets {
         active

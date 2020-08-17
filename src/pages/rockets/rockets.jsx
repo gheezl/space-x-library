@@ -9,8 +9,9 @@ const Rockets = ({ rockets }) => {
         <Fragment>
             {
                 rockets.map(rocket => {
+                    console.log(rocket.name)
                     return (
-                        <span>{rocket}</span>
+                        <span>{rocket.name}</span>
                     )
                 })
             }

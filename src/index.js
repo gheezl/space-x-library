@@ -18,20 +18,20 @@ const Link = createHttpLink({
   uri: "https://api.spacex.land/graphql/"
 })
 
-const cache = new InMemoryCache()
+export const cache = new InMemoryCache()
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   link: Link,
   cache: cache,
   typeDefs: typeDefs,
   resolvers: resolvers
 })
 
-client.writeData({
-  data: {
-    rockets: [null]
-  }
-})
+// client.writeData({
+//   data: {
+//     rockets: "hi"
+//   }
+// })
 
 
 

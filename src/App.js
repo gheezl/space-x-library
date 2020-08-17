@@ -4,14 +4,13 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
 const RocketsHoc = lazy(() => import("./pages/rockets/rockets-hoc.jsx"))
-const HomePageHoc = lazy(() => import("./pages/homepage/homepage-hoc.jsx"))
 
 
 const App = () => {
   return (
     <Fragment>
       <Suspense fallback={"loading..."}>
-        <Route exact path="/" component={HomePageHoc} />
+        <Route exact path="/" component={RocketsHoc} />
       </Suspense>
     </Fragment>
   )
