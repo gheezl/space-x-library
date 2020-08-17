@@ -11,6 +11,13 @@
     font-size: 25px;
 }
 
+.welcome {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 75px;
+}
+
 @media only screen and (max-width: 800px) {
     .links {
         display: grid;

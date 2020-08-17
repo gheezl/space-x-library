@@ -1,4 +1,4 @@
-import React, { Fragment, lazy, Suspense } from 'react';
+import React, { Fragment, lazy, Suspense, Component } from 'react';
 import { Route } from "react-router-dom";
 
 import './App.css';
@@ -12,17 +12,19 @@ const MissionsHoc = lazy(() => import("./pages/missions/missions-hoc.jsx"))
 
 
 
-const App = () => {
-  return (
-    <Fragment>
-      <Header />
-      <Suspense fallback={<Loading />}>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/rockets" component={RocketsHoc} />
-        <Route exact path="/missions" component={MissionsHoc} />
-      </Suspense>
-    </Fragment>
-  )
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Header />
+        <Suspense fallback={<Loading />}>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/rockets" component={RocketsHoc} />
+          <Route exact path="/missions" component={MissionsHoc} />
+        </Suspense>
+      </Fragment>
+    )
+  }
 }
 
 export default App;

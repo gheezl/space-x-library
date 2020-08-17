@@ -13,9 +13,10 @@ export const client = new ApolloClient({
     cache: cache,
 })
 
-client.writeData({
+cache.writeData({
     data: {
         rockets: [],
-        missions: []
+        missions: [],
+        launches: []
     }
 })
