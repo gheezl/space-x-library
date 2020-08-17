@@ -4,11 +4,14 @@ import { ApolloProvider } from "react-apollo";
 import { createHttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
 import { ApolloClient, gql } from "apollo-boost"
+import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+import { resolvers, typeDefs } from "./graphql/resolvers.js"
+
 
 const Link = createHttpLink({
   uri: "https://api.spacex.land/graphql/"
@@ -18,28 +21,17 @@ const cache = new InMemoryCache()
 
 const client = new ApolloClient({
   link: Link,
-  cache: cache
+  cache: cache,
+  typeDefs: typeDefs,
+  resolvers: resolvers
 })
 
-// client.query({
-//   query: gql`
-//   {
-//     rockets {
-//     active
-//     company
-//     cost_per_launch
-//     country
-//     description
-//     diameter {
-//       feet
-//       meters
-//     }
-//     name
-//     wikipedia
-//   }
-//   }
-//   `
-// }).then(response => console.log(response))
+client.writeData({
+  data: {
+    rockets: ["hi", "hru"]
+  }
+})
+
 
 
 ReactDOM.render(

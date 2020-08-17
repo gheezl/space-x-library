@@ -1,12 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 
 import './App.css';
+
+const RocketsHoc = lazy(() => import("./pages/rockets/rockets-hoc.jsx"))
 
 
 const App = () => {
   return (
     <Fragment>
-      <h1>THIS IS THE SPACE X LIBRARY</h1>
+      <Suspense fallback={"loading..."}>
+        <RocketsHoc />
+      </Suspense>
     </Fragment>
   )
 }

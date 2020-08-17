@@ -3,10 +3,17 @@ import React, { Fragment } from 'react';
 import './rockets.css';
 
 
-const Rockets = () => {
+const Rockets = ({ rockets }) => {
+    console.log(rockets)
     return (
         <Fragment>
-            <h1>Hi</h1>
+            {
+                rockets.map(rocket => {
+                    return (
+                        <span>{rocket}</span>
+                    )
+                })
+            }
         </Fragment>
     )
 }
