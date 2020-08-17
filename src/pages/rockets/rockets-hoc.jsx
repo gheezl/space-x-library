@@ -1,28 +1,10 @@
 import React from 'react';
-import { Query } from "react-apollo";
+import { Query, Mutation } from "react-apollo";
 import { gql } from "apollo-boost"
 
 import Rockets from "./rockets.jsx"
 
 import { GET_ROCKETS } from "../../graphql/resolvers.js"
-
-// const GET_ROCKETS = gql`
-//     {
-//         rockets {
-//         active
-//         company
-//         cost_per_launch
-//         country
-//         description
-//         diameter {
-//             feet
-//             meters
-//         }
-//         name
-//         wikipedia
-//         }
-//     }
-// `
 
 
 const RocketsHoc = () => {

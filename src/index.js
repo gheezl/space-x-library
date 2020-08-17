@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "react-apollo";
 import { createHttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
@@ -28,7 +29,7 @@ const client = new ApolloClient({
 
 client.writeData({
   data: {
-    rockets: ["hi", "hru"]
+    rockets: [null]
   }
 })
 
@@ -37,7 +38,9 @@ client.writeData({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
