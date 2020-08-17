@@ -2,6 +2,7 @@ import { createHttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
 import { ApolloClient } from "apollo-boost"
 
+
 const Link = createHttpLink({
     uri: "https://api.spacex.land/graphql/"
 })
@@ -17,6 +18,7 @@ cache.writeData({
     data: {
         rockets: [],
         missions: [],
-        launches: []
+        launches: [],
+        toggleLibrary: false,
     }
 })

@@ -1,20 +1,25 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from "react-router-dom"
+import { gql } from "apollo-boost"
 
 import './homepage.css';
 
+import { client } from "../../graphql/client.js"
+
 
 const HomePage = () => {
-    let [toggle, setToggle] = useState(false)
+    const query = gql`
+        query data {
+            toggleLibrary
+        }
+    `
 
-    const onClickFunction = () => {
-        setToggle(!toggle)
-    }
 
+    const toggle = client.readQuery({ query })
     return (
         <Fragment>
             {
-                toggle
+                toggle.toggleLibrary
                     ?
                     (
                         <div className="links">
@@ -35,7 +40,7 @@ const HomePage = () => {
                             <span >
                                 Welcome to the Space X Library.
                             </span>
-                            <span onClick={onClickFunction}>
+                            <span>
                                 Go to Library
                             </span>
                         </div>
