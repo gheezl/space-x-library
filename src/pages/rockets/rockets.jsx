@@ -8,7 +8,7 @@ const Card = lazy(() => import("../../components/card/card.jsx"))
 const Rockets = ({ rockets }) => {
     return (
         <Fragment>
-            <div className="mission-border">
+            <div className="map-border">
                 {
                     rockets.map(rocket => (
                         <Card props={rocket.name} />

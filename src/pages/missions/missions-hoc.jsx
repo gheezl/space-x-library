@@ -2,10 +2,11 @@ import React from 'react';
 import { Query } from "react-apollo";
 
 import Missions from "./missions.jsx"
+import Loading from "../../components/loading/loading.jsx"
 
 import { MISSION_INFO } from "../../graphql/resolvers.js"
 
-import { client } from "../../index.js"
+import { client } from "../../graphql/client.js"
 
 
 const MissionsHoc = () => {
@@ -17,9 +18,7 @@ const MissionsHoc = () => {
                         missions: data
                     }
                 })
-                console.log(data)
-                if (error) return "ERROR"
-                if (loading) return "loading..."
+                if (loading) return <Loading />
                 else return <Missions missions={data.missions} />
             }
             }

@@ -1,0 +1,37 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.loader{
+  width:100px;
+  height:100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:10px 20px;
+}
+
+@keyframes load10{
+  50%{
+    transform:rotatez(180deg);
+    border-style:dashed;
+    border-color:white whitesmoke white whitesmoke;
+  }
+  100%{
+    transform:rotatez(360deg);
+  }
+}
+.loader10::before{
+  content:"";
+  color:white;
+  height:50px;
+  width:50px;
+  background:transparent;
+  border-radius:50%;
+  border:20px solid black;
+  animation:load10 1s infinite;
+}
+
+/* border-color:red maroon indianred orangered; */

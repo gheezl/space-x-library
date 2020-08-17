@@ -7,8 +7,11 @@ const Header = () => {
     return (
         <Fragment>
             <div className="header">
-                <div>
-                    <span className="header-title">Space X Library</span>
+                <div className="header-title">
+                    <span >Space X Library</span>
+                </div>
+                <div className="about">
+                    <span>About</span>
                 </div>
             </div>
         </Fragment>

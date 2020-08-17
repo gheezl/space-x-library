@@ -2,37 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "react-apollo";
-import { createHttpLink } from "apollo-link-http"
-import { InMemoryCache } from "apollo-cache-inmemory"
-import { ApolloClient } from "apollo-boost"
+// import { createHttpLink } from "apollo-link-http"
+// import { InMemoryCache } from "apollo-cache-inmemory"
+// import { ApolloClient } from "apollo-boost"
+import { client } from "./graphql/client.js"
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
 import App from './App';
 
-import { resolvers, typeDefs } from "./graphql/resolvers.js"
+// import { resolvers, typeDefs } from "./graphql/resolvers.js"
 
 
-const Link = createHttpLink({
-  uri: "https://api.spacex.land/graphql/"
-})
+// const Link = createHttpLink({
+//   uri: "https://api.spacex.land/graphql/"
+// })
 
-export const cache = new InMemoryCache()
+// export const cache = new InMemoryCache()
 
-export const client = new ApolloClient({
-  link: Link,
-  cache: cache,
-  typeDefs: typeDefs,
-  resolvers: resolvers
-})
+// export const client = new ApolloClient({
+//   link: Link,
+//   cache: cache,
+//   typeDefs: typeDefs,
+//   resolvers: resolvers
+// })
 
-client.writeData({
-  data: {
-    rockets: [],
-    missions: []
-  }
-})
+// client.writeData({
+//   data: {
+//     rockets: [],
+//     missions: []
+//   }
+// })
 
 
 
