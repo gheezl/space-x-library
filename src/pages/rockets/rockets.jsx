@@ -1,20 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 
 import './rockets.css';
 
+const Card = lazy(() => import("../../components/card/card.jsx"))
+
 
 const Rockets = ({ rockets }) => {
-    console.log(rockets)
     return (
         <Fragment>
-            {
-                rockets.map(rocket => {
-                    console.log(rocket.name)
-                    return (
-                        <span>{rocket.name}</span>
-                    )
-                })
-            }
+            <div className="mission-border">
+                {
+                    rockets.map(rocket => (
+                        <Card props={rocket.name} />
+                    ))
+                }
+            </div>
         </Fragment>
     )
 }

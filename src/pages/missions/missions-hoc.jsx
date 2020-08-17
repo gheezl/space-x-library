@@ -1,26 +1,26 @@
 import React from 'react';
 import { Query } from "react-apollo";
 
-import Rockets from "./rockets.jsx"
+import Missions from "./missions.jsx"
 
-import { ROCKET_INFO } from "../../graphql/resolvers.js"
+import { MISSION_INFO } from "../../graphql/resolvers.js"
 
 import { client } from "../../index.js"
 
 
-const RocketsHoc = () => {
+const MissionsHoc = () => {
     return (
-        <Query query={ROCKET_INFO}>
+        <Query query={MISSION_INFO}>
             {({ loading, error, data }) => {
                 client.writeData({
                     data: {
-                        rockets: data
+                        missions: data
                     }
                 })
                 console.log(data)
                 if (error) return "ERROR"
                 if (loading) return "loading..."
-                else return <Rockets rockets={data.rockets} />
+                else return <Missions missions={data.missions} />
             }
             }
         </Query>
@@ -28,4 +28,4 @@ const RocketsHoc = () => {
 }
 
 
-export default RocketsHoc;
+export default MissionsHoc;

@@ -36,6 +36,18 @@ export const ROCKET_INFO = gql`
     }
 `
 
+export const MISSION_INFO = gql`
+    {
+    missions {
+        description
+        id
+        name
+        wikipedia
+        manufacturers
+  }
+    }
+`
+
 // resolvers
 
 export const resolvers = {
