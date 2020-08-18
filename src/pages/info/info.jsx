@@ -1,9 +1,20 @@
 import React, { Fragment } from "react"
+import { gql } from "apollo-boost"
 
 import "./info.css"
 
+import { client } from "../../graphql/client.js"
 
 const Info = ({ props }) => {
+    const query = gql`
+        query cache {
+            rockets
+        }
+    `
+
+    const { rocketsData } = client.readQuery({ query })
+
+    console.log(rocketsData)
     return (
         <Fragment>
             <div className="information">

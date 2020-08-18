@@ -16,8 +16,10 @@ export const client = new ApolloClient({
     resolvers: resolvers
 })
 
-cache.writeData({
-    data: {
-        toggleLibrary: true,
-    }
-})
+// cache.writeData({
+//     data: {
+//         toggleLibrary: false,
+//         rocketData: null,
+//         missionData: null
+//     }
+// })
