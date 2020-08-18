@@ -1,0 +1,29 @@
+.information {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 25px;
+}
+
+.description-title {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.wikipedia-link {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    margin-top: 50px;
+}

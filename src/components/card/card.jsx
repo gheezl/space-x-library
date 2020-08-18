@@ -1,16 +1,17 @@
 import React, { Fragment } from "react"
+import { withRouter } from "react-router-dom"
 
 import "./card.css"
 
 
-const Card = ({ props }) => {
+const Card = ({ props, history }) => {
     return (
         <Fragment>
             <div className="card-border">
-                <span>{props}</span>
+                <span onClick={() => history.push("/information")}>{props}</span>
             </div>
         </Fragment>
     )
 }
 
-export default Card;
+export default withRouter(Card);

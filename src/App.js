@@ -9,6 +9,7 @@ import Loading from "./components/loading/loading.jsx"
 const HomePage = lazy(() => import("./pages/homepage/homepage.jsx"))
 const Rockets = lazy(() => import("./pages/rockets/rockets.jsx"))
 const Missions = lazy(() => import("./pages/missions/missions.jsx"))
+const Info = lazy(() => import("./pages/info/info.jsx"))
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/rockets" component={Rockets} />
           <Route exact path="/missions" component={Missions} />
+          <Route exact path="/information" component={Info} />
         </Suspense>
       </Fragment>
     )

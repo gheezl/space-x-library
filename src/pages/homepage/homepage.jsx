@@ -17,26 +17,18 @@ const HomePage = () => {
 
     const { toggleLibrary } = client.readQuery({ query })
 
-    const TOGGLE_LIBRARY_CHANGE = gql`
-        mutation ToggleLibraryChange {
-            toggleLibraryChange @client
-        }
-    `
 
 
     const onClickFunction = () => {
-        cache.modify({
-            id: cache.identify(toggleLibrary),
-            fields: {
-                name(toggleLibrary) {
-                    return !toggleLibrary
-                }
+        client.writeQuery({
+            query,
+            data: {
+                toggleLibrary: true
             }
         })
     }
 
-    const [libraryChange, { data }] = useMutation(TOGGLE_LIBRARY_CHANGE)
-
+    console.log(toggleLibrary)
     return (
         <Fragment>
             {
@@ -61,7 +53,7 @@ const HomePage = () => {
                             <span >
                                 Welcome to the Space X Library.
                             </span>
-                            <span onClick={libraryChange}>
+                            <span onClick={onClickFunction}>
                                 Go to Library
                             </span>
                         </div>

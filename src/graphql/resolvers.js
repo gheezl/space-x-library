@@ -55,10 +55,10 @@ const query = gql`
 
 export const resolvers = {
     Mutation: {
-        toggleLibraryChange: ({ cache }) => {
-            const { toggleLibrary } = cache.readQuery({ query: query })
+        toggleLibraryChange: (client) => {
+            const { toggleLibrary } = client.readQuery({ query: query })
 
-            cache.writeQuery({ query: query, data: !toggleLibrary })
+            client.writeQuery({ query: query, data: !toggleLibrary })
         }
     }
 }
