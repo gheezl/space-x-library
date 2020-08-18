@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom"
 import { gql } from "apollo-boost"
-import { useQuery } from '@apollo/react-hooks'
+import { useMutation } from '@apollo/react-hooks'
 
 import './homepage.css';
 
@@ -17,8 +17,16 @@ const HomePage = () => {
 
     const { toggleLibrary } = client.readQuery({ query })
 
+    const TOGGLE_LIBRARY_CHANGE = gql`
+        mutation ToggleLibraryChange {
+            toggleLibraryChange @client
+        }
+    `
+
+
     const onClickFunction = () => {
         cache.modify({
+            id: cache.identify(toggleLibrary),
             fields: {
                 name(toggleLibrary) {
                     return !toggleLibrary
@@ -26,6 +34,8 @@ const HomePage = () => {
             }
         })
     }
+
+    const [libraryChange, { data }] = useMutation(TOGGLE_LIBRARY_CHANGE)
 
     return (
         <Fragment>
@@ -51,7 +61,7 @@ const HomePage = () => {
                             <span >
                                 Welcome to the Space X Library.
                             </span>
-                            <span onClick={onClickFunction}>
+                            <span onClick={libraryChange}>
                                 Go to Library
                             </span>
                         </div>

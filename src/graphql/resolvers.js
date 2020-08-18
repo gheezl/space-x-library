@@ -1,20 +1,15 @@
 import { gql } from "apollo-boost"
+import { cache } from "./client"
 
 // type definitions
 
 export const typeDefs = gql`
     extend type Mutation {
-        Rockets(rocket: array!): rocket!
+        ToggleLibraryChange: Boolean!
     }
 `
 
 // client references
-
-export const GET_ROCKETS = gql`
-    {
-        rockets @client
-    }
-`
 
 // querys from the database
 
@@ -50,19 +45,20 @@ export const MISSION_INFO = gql`
 
 // resolvers
 
+const query = gql`
+    query toggleLibrary {
+        toggleLibrary @client
+    }
+`
+
+
+
 export const resolvers = {
     Mutation: {
-        AddRockets: (_root, { item }, { cache }) => {
-            const { rockets } = cache.readQuery({
-                query: GET_ROCKETS
-            })
+        toggleLibraryChange: ({ cache }) => {
+            const { toggleLibrary } = cache.readQuery({ query: query })
 
-            cache.writeQuery({
-                query: GET_ROCKETS,
-                data: { rockets: ROCKET_INFO }
-            })
-
-            return rockets;
+            cache.writeQuery({ query: query, data: !toggleLibrary })
         }
     }
 }
