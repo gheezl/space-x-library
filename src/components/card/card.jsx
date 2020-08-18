@@ -1,22 +1,30 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
+import { connect } from 'react-redux'
 import { withRouter } from "react-router-dom"
 
 import "./card.css"
 
-import RocketsContext from "../../contexts/rockets/rockets-context.js"
+import { setData } from "../../redux/data/data-actions.js"
 
 
-const Card = ({ props, history }) => {
+const Card = ({ data, history, setData }) => {
+    console.log(data)
+    const onClickFunction = (data) => {
+        setData(data)
+        history.push("/information")
+    }
 
     return (
         <Fragment>
-            {/* <RocketsContext.Provider value={props}> */}
             <div className="card-border">
-                <span onClick={() => history.push("/information")}>{props.name}</span>
+                <span onClick={onClickFunction}>{data.name}</span>
             </div>
-            {/* </RocketsContext.Provider> */}
         </Fragment>
     )
 }
 
-export default withRouter(Card);
+const mapDispatchToProps = dispatch => ({
+    setData: (data) => dispatch(setData(data))
+})
+
+export default withRouter(connect(null, mapDispatchToProps)(Card));

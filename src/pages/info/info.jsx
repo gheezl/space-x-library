@@ -2,12 +2,8 @@ import React, { Fragment, useContext } from "react"
 
 import "./info.css"
 
-import RocketsContext from "../../contexts/rockets/rockets-context.js"
-
 
 const Info = () => {
-    const information = useContext(RocketsContext)
-    console.log(information)
     return (
         <Fragment>
             <div className="information">
