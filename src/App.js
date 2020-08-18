@@ -7,8 +7,8 @@ import Header from "./components/header/header.jsx"
 import Loading from "./components/loading/loading.jsx"
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.jsx"))
-const RocketsHoc = lazy(() => import("./pages/rockets/rockets-hoc.jsx"))
-const MissionsHoc = lazy(() => import("./pages/missions/missions-hoc.jsx"))
+const Rockets = lazy(() => import("./pages/rockets/rockets.jsx"))
+const Missions = lazy(() => import("./pages/missions/missions.jsx"))
 
 
 
@@ -19,8 +19,8 @@ class App extends Component {
         <Header />
         <Suspense fallback={<Loading />}>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/rockets" component={RocketsHoc} />
-          <Route exact path="/missions" component={MissionsHoc} />
+          <Route exact path="/rockets" component={Rockets} />
+          <Route exact path="/missions" component={Missions} />
         </Suspense>
       </Fragment>
     )

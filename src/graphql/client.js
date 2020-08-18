@@ -16,9 +16,6 @@ export const client = new ApolloClient({
 
 cache.writeData({
     data: {
-        rockets: [],
-        missions: [],
-        launches: [],
         toggleLibrary: false,
     }
 })

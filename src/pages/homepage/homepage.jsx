@@ -1,25 +1,36 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom"
 import { gql } from "apollo-boost"
+import { useQuery } from '@apollo/react-hooks'
 
 import './homepage.css';
 
-import { client } from "../../graphql/client.js"
+import { client, cache } from "../../graphql/client.js"
 
 
 const HomePage = () => {
     const query = gql`
-        query data {
+        query cache {
             toggleLibrary
         }
     `
 
+    const { toggleLibrary } = client.readQuery({ query })
 
-    const toggle = client.readQuery({ query })
+    const onClickFunction = () => {
+        cache.modify({
+            fields: {
+                name(toggleLibrary) {
+                    return !toggleLibrary
+                }
+            }
+        })
+    }
+
     return (
         <Fragment>
             {
-                toggle.toggleLibrary
+                toggleLibrary
                     ?
                     (
                         <div className="links">
@@ -40,7 +51,7 @@ const HomePage = () => {
                             <span >
                                 Welcome to the Space X Library.
                             </span>
-                            <span>
+                            <span onClick={onClickFunction}>
                                 Go to Library
                             </span>
                         </div>

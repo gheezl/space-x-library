@@ -1,16 +1,26 @@
-import React, { Fragment, lazy, Suspense } from 'react';
+import React, { Fragment, lazy } from 'react';
+import { useQuery } from '@apollo/react-hooks'
 
 import './rockets.css';
+
+import { ROCKET_INFO } from "../../graphql/resolvers.js"
+import { MISSION_INFO } from "../../graphql/resolvers.js"
+import Loading from "../../components/loading/loading"
 
 const Card = lazy(() => import("../../components/card/card.jsx"))
 
 
-const Rockets = ({ rockets }) => {
+const Rockets = () => {
+    const { loading, error, data } = useQuery(ROCKET_INFO)
+
+    if (loading) return <Loading />
+    if (error) return "ERROR"
+
     return (
         <Fragment>
             <div className="rocket-border">
                 {
-                    rockets.map(rocket => (
+                    data.rockets.map(rocket => (
                         <Card props={rocket.name} key={rocket.name} />
                     ))
                 }

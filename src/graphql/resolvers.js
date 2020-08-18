@@ -21,17 +21,17 @@ export const GET_ROCKETS = gql`
 export const ROCKET_INFO = gql`
     {
         rockets {
-        active
-        company
-        cost_per_launch
-        country
-        description
-        diameter {
-            feet
-            meters
-        }
-        name
-        wikipedia
+            active
+            company
+            cost_per_launch
+            country
+            description
+            diameter {
+                feet
+                meters
+            }
+            name
+            wikipedia
         }
     }
 `

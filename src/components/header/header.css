@@ -14,7 +14,7 @@
 
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     grid-column-start: 3;
     grid-column-end: 3;
     margin-top: 20px;
