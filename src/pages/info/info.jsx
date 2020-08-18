@@ -1,26 +1,37 @@
-import React, { Fragment, useContext } from "react"
+import React, { Fragment } from "react"
+import { connect } from 'react-redux'
+import { createStructuredSelector } from "reselect"
+
+import { SelectData } from "../../redux/data/data-selectors.js"
 
 import "./info.css"
 
 
-const Info = () => {
+const Info = ({ data }) => {
+    console.log(data)
     return (
         <Fragment>
             <div className="information">
-                <h2 className="description-title">Description</h2>
+                <h2 className="title">Description</h2>
                 <div className="description">
                     <span>
-                        The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009.
-                        On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
-                 </span>
+                        {data.data.description}
+                    </span>
                 </div>
                 <div className="wikipedia-link">
-                    <a href={"https://en.wikipedia.org/wiki/Falcon_1"}>wikipedia page</a>
+                    <a href={data.data.wikipedia}>wikipedia page</a>
+                </div>
+                <h2 className="title">Manufacturers</h2>
+                <div className="manufacturers">
+                    {data.data.manufacturers}
                 </div>
             </div>
         </Fragment>
     )
 }
 
+const mapStateToProps = createStructuredSelector({
+    data: SelectData
+})
 
-export default Info;
+export default connect(mapStateToProps)(Info);

@@ -5,7 +5,7 @@
     padding: 25px;
 }
 
-.description-title {
+.title {
     display: flex;
     justify-content: center;
 }
@@ -26,4 +26,13 @@
     grid-row-start: 3;
     grid-row-end: 3;
     margin-top: 50px;
+}
+
+.manufacturers {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }

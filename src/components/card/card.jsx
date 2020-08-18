@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment } from "react"
 import { connect } from 'react-redux'
 import { withRouter } from "react-router-dom"
 
@@ -8,9 +8,10 @@ import { setData } from "../../redux/data/data-actions.js"
 
 
 const Card = ({ data, history, setData }) => {
-    console.log(data)
-    const onClickFunction = (data) => {
+
+    const onClickFunction = () => {
         setData(data)
+        console.log(data)
         history.push("/information")
     }
 
