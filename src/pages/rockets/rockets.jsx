@@ -20,7 +20,7 @@ const Rockets = () => {
             <div className="rocket-border">
                 {
                     data.rockets.map(rocket => (
-                        <Card props={rocket.name} key={rocket.name} />
+                        <Card props={rocket} key={rocket.name} />
                     ))
                 }
             </div>

@@ -1,12 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom"
-import { gql } from "apollo-boost"
-import { useMutation } from '@apollo/react-hooks'
 
 import './homepage.css';
-
-import { client, cache } from "../../graphql/client.js"
-
 
 const HomePage = () => {
     return (

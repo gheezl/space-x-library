@@ -20,7 +20,7 @@ const Missions = () => {
             <div className="mission-border">
                 {
                     data.missions.map(mission => (
-                        <Card props={mission.name} key={mission.name} />
+                        <Card props={mission} key={mission.name} />
                     ))
                 }
             </div>

@@ -1,20 +1,13 @@
-import React, { Fragment } from "react"
-import { gql } from "apollo-boost"
+import React, { Fragment, useContext } from "react"
 
 import "./info.css"
 
-import { client } from "../../graphql/client.js"
+import RocketsContext from "../../contexts/rockets/rockets-context.js"
 
-const Info = ({ props }) => {
-    const query = gql`
-        query cache {
-            rockets
-        }
-    `
 
-    const { rocketsData } = client.readQuery({ query })
-
-    console.log(rocketsData)
+const Info = () => {
+    const information = useContext(RocketsContext)
+    console.log(information)
     return (
         <Fragment>
             <div className="information">

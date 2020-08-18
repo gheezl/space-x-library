@@ -11,15 +11,5 @@ export const cache = new InMemoryCache()
 
 export const client = new ApolloClient({
     link: Link,
-    cache: cache,
-    typeDefs: typeDefs,
-    resolvers: resolvers
+    cache: cache
 })
-
-// cache.writeData({
-//     data: {
-//         toggleLibrary: false,
-//         rocketData: null,
-//         missionData: null
-//     }
-// })

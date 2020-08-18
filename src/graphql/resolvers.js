@@ -3,11 +3,11 @@ import { cache } from "./client"
 
 // type definitions
 
-export const typeDefs = gql`
-    extend type Mutation {
-        ToggleLibraryChange: Boolean!
-    }
-`
+// export const typeDefs = gql`
+//     extend type Mutation {
+//         ToggleLibraryChange: Boolean!
+//     }
+// `
 
 // client references
 
@@ -45,20 +45,20 @@ export const MISSION_INFO = gql`
 
 // resolvers
 
-const query = gql`
-    query toggleLibrary {
-        toggleLibrary @client
-    }
-`
+// const query = gql`
+//     query toggleLibrary {
+//         toggleLibrary @client
+//     }
+// `
 
 
 
-export const resolvers = {
-    Mutation: {
-        toggleLibraryChange: (obj, args, context, info) => {
-            const { toggleLibrary } = context.client.readQuery({ query: query })
+// export const resolvers = {
+//     Mutation: {
+//         toggleLibraryChange: (obj, args, context, info) => {
+//             const { toggleLibrary } = context.client.readQuery({ query: query })
 
-            context.client.writeQuery({ query: query, data: !toggleLibrary })
-        }
-    }
-}
+//             context.client.writeQuery({ query: query, data: !toggleLibrary })
+//         }
+//     }
+// }
