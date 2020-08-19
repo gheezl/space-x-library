@@ -11,6 +11,7 @@ const Description = lazy(() => import("../../components/description/description.
 const CostPerLaunch = lazy(() => import("../../components/cost-per-launch/cost-per-launch.jsx"))
 const Country = lazy(() => import("../../components/country/country.jsx"))
 const Diameter = lazy(() => import("../../components/diameter/diameter.jsx"))
+const IsActive = lazy(() => import("../../components/is-active/is-active.jsx"))
 
 
 const Info = ({ data }) => {
@@ -26,6 +27,7 @@ const Info = ({ data }) => {
                 <CostPerLaunch costPerLaunch={data.data.cost_per_launch} />
                 <Country country={data.data.country} />
                 <Diameter diameter={data.data.diameter} />
+                <IsActive isActive={data.data.active} />
             </div>
         </Fragment>
     )

@@ -3,9 +3,10 @@ import React, { Fragment } from "react"
 const CostPerLaunch = ({ costPerLaunch }) => {
     return (
         <Fragment>
-            <h2 className="title">Cost Per Launch</h2>
+
             <div className="middle-column">
-                <span>
+                <h2 className="title">Cost Per Launch</h2>
+                <span className="title">
                     $ {costPerLaunch}
                 </span>
             </div>
