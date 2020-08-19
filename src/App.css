@@ -1,11 +1,11 @@
 body {
   font-family: 'Inconsolata', monospace;
-  background-color: black;
-  color: white;
-  text-shadow: 1px 1px grey;
+  background-color: white;
+  color: black;
+  text-shadow: 1px 1px whitesmoke;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }

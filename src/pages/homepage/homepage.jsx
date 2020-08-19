@@ -12,22 +12,22 @@ const HomePage = () => {
             <div className="links">
                 <div className="link">
                     <Link to="/rockets" >
-                        <span>Rockets</span>
+                        <span>Rockets ☷</span>
                     </Link>
                 </div>
                 <div className="link">
                     <Link to="/missions" >
-                        <span>Missions</span>
+                        <span>Missions ☷</span>
                     </Link>
                 </div>
                 <div className="link">
                     <Link to="/launch-pads" >
-                        <span>Launch Pads</span>
+                        <span>Launch Pads ☷</span>
                     </Link>
                 </div>
                 <div className="link">
                     <Link to="/launches">
-                        <span>Launches</span>
+                        <span>Launches ☷</span>
                     </Link>
                 </div>
             </div>

@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 30px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px #fff;
 }
 
 .header-title {
@@ -17,7 +19,7 @@
     justify-content: right;
     grid-column-start: 3;
     grid-column-end: 3;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     cursor: pointer;
 }
