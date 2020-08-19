@@ -1,7 +1,6 @@
 import { createHttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
 import { ApolloClient } from "apollo-boost"
-import { resolvers, typeDefs } from "./resolvers.js"
 
 const Link = createHttpLink({
     uri: "https://api.spacex.land/graphql/"

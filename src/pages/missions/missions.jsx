@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks'
 
 import "./mission.css"
 
-import { MISSION_INFO } from "../../graphql/resolvers.js"
+import { MISSION_INFO } from "../../graphql/querys.js"
 import Loading from "../../components/loading/loading"
 
 const Card = lazy(() => import("../../components/card/card.jsx"))

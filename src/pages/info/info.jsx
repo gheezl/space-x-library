@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, lazy } from "react"
 import { connect } from 'react-redux'
 import { createStructuredSelector } from "reselect"
 
@@ -6,25 +6,23 @@ import { SelectData } from "../../redux/data/data-selectors.js"
 
 import "./info.css"
 
+const Manufacturers = lazy(() => import("./manufacturers/manufacturers.jsx"))
+const Wikipedia = lazy(() => import("./wikipedia/wikipedia.jsx"))
+const Description = lazy(() => import("./description/description.jsx"))
+
 
 const Info = ({ data }) => {
     console.log(data)
     return (
         <Fragment>
             <div className="information">
-                <h2 className="title">Description</h2>
-                <div className="description">
-                    <span>
-                        {data.data.description}
-                    </span>
-                </div>
-                <div className="wikipedia-link">
-                    <a href={data.data.wikipedia}>wikipedia page</a>
-                </div>
-                <h2 className="title">Manufacturers</h2>
-                <div className="manufacturers">
-                    {data.data.manufacturers}
-                </div>
+                <Description description={data.data.description} />
+                <Wikipedia wikipedia={data.data.wikipedia} />
+                {
+                    data.data.manufacturers
+                        ? (<Manufacturers manufacturers={data.data.manufacturers} />)
+                        : (null)
+                }
             </div>
         </Fragment>
     )
