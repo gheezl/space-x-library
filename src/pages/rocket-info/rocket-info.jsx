@@ -15,20 +15,30 @@ const IsActive = lazy(() => import("../../components/is-active/is-active.jsx"))
 
 
 const Info = ({ data }) => {
-    console.log(data)
     return (
         <Fragment>
-            <h1 className="name">
-                {data.data.name}
-            </h1>
-            <div className="information">
-                <Description description={data.data.description} />
-                <Wikipedia wikipedia={data.data.wikipedia} />
-                <CostPerLaunch costPerLaunch={data.data.cost_per_launch} />
-                <Country country={data.data.country} />
-                <Diameter diameter={data.data.diameter} />
-                <IsActive isActive={data.data.active} />
-            </div>
+            {
+                data.data
+                    ? (
+                        <Fragment>
+                            <h1 className="name">
+                                {data.data.name}
+                            </h1>
+                            <div className="information">
+                                <Description description={data.data.description} />
+                                <Wikipedia wikipedia={data.data.wikipedia} />
+                                <CostPerLaunch costPerLaunch={data.data.cost_per_launch} />
+                                <Country country={data.data.country} />
+                                <Diameter diameter={data.data.diameter} />
+                                <IsActive isActive={data.data.active} />
+                            </div>
+                        </Fragment>
+                    )
+                    : (
+                        null
+                    )
+            }
+
         </Fragment>
     )
 }

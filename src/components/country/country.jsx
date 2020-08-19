@@ -3,9 +3,9 @@ import React, { Fragment } from "react"
 const Country = ({ country }) => {
     return (
         <Fragment>
-            <h2 className="title">Country</h2>
             <div className="right-column">
-                <span>
+                <h2 className="title">Country</h2>
+                <span className="title">
                     {country}
                 </span>
             </div>

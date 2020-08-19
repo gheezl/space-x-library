@@ -1,11 +1,4 @@
-.diameter-data {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
 .diameter {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
 }

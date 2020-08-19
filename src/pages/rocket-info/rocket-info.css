@@ -6,7 +6,7 @@
 .information {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px 250px;
     padding: 25px;
 }
 
@@ -16,18 +16,17 @@
 }
 
 .left-column {
-    display: flex;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 
 .wikipedia-title {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 .wikipedia-link {
@@ -35,8 +34,8 @@
     justify-content: center;
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
     font-size: 25px;
 }
 
@@ -48,35 +47,29 @@
 }
 
 .right-column {
-    display: flex;
-    justify-content: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.right-column-second-row {
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
 }
 
-.right-column-second-row {
-    display: flex;
-    justify-content: center;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
 .middle-column-second-row {
-    display: flex;
-    justify-content: center;
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 .left-column-second-row {
     grid-column-start: 1;
     grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
