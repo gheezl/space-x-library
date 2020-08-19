@@ -3,13 +3,13 @@ import React, { Fragment } from "react"
 const Diameter = ({ diameter }) => {
     return (
         <Fragment>
-            <h2 className="title">Diameter</h2>
-            <div className="left-column-second-row">
+            <div className="right-column-second-row">
+                <h2 className="title">Diameter</h2>
                 <span>
-                    {diameter.feet}
+                    {diameter.feet} feet
                 </span>
                 <span>
-                    {diameter.meters}
+                    {diameter.meters} meters
                 </span>
             </div>
         </Fragment>
