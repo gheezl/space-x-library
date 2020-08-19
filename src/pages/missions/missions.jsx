@@ -15,6 +15,7 @@ const Missions = () => {
     if (loading) return <Loading />
     if (error) return "ERROR"
 
+    console.log(data)
     return (
         <Fragment>
             <div className="mission-border">

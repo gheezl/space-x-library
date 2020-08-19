@@ -4,18 +4,13 @@ import { createStructuredSelector } from "reselect"
 
 import { SelectData } from "../../redux/data/data-selectors.js"
 
-import "./info.css"
+import "../rocket-info/info.css"
 
 const Wikipedia = lazy(() => import("../../components/wikipedia/wikipedia.jsx"))
 const Description = lazy(() => import("../../components/description/description.jsx"))
-const CostPerLaunch = lazy(() => import("../../components/cost-per-launch/cost-per-launch.jsx"))
-const Country = lazy(() => import("../../components/country/country.jsx"))
-const Diameter = lazy(() => import("../../components/diameter/diameter.jsx"))
-const IsActive = lazy(() => import("../../components/is-active/is-active.jsx"))
+const Manufacturers = lazy(() => import("../../components/manufacturers/manufacturers.jsx"))
 
-
-const RocketInfo = ({ data }) => {
-    console.log(data)
+const MissionsInfo = ({ data }) => {
     return (
         <Fragment>
             {
@@ -28,10 +23,7 @@ const RocketInfo = ({ data }) => {
                             <div className="information">
                                 <Description description={data.data.description} />
                                 <Wikipedia wikipedia={data.data.wikipedia} />
-                                <CostPerLaunch costPerLaunch={data.data.cost_per_launch} />
-                                <Country country={data.data.country} />
-                                <Diameter diameter={data.data.diameter} />
-                                <IsActive isActive={data.data.active} />
+                                <Manufacturers manufacturers={data.data.manufacturers} />
                             </div>
                         </Fragment>
                     )
@@ -39,7 +31,6 @@ const RocketInfo = ({ data }) => {
                         null
                     )
             }
-
         </Fragment>
     )
 }
@@ -48,4 +39,4 @@ const mapStateToProps = createStructuredSelector({
     data: SelectData
 })
 
-export default connect(mapStateToProps)(RocketInfo);
+export default connect(mapStateToProps)(MissionsInfo);

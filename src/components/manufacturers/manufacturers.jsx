@@ -3,9 +3,11 @@ import React, { Fragment } from "react"
 const Manufacturers = ({ manufacturers }) => {
     return (
         <Fragment>
-            <h2 className="title">Manufacturers</h2>
             <div className="middle-column">
-                {manufacturers}
+                <h2 className="title">Manufacturers</h2>
+                <span className="title">
+                    {manufacturers}
+                </span>
             </div>
         </Fragment>
     )
