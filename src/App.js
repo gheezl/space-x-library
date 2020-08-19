@@ -1,7 +1,11 @@
-import React, { Fragment, lazy, Suspense, Component } from 'react';
+import React, { Fragment, lazy, Suspense, useState } from 'react';
 import { Route } from "react-router-dom";
+import { useQuery } from '@apollo/react-hooks'
 
 import './App.css';
+
+import { InfoContext, DataContext, state } from "./contexts/contexts.js"
+import { ROCKET_INFO, MISSION_INFO } from "./graphql/querys.js"
 
 import Header from "./components/header/header.jsx"
 import Loading from "./components/loading/loading.jsx"
@@ -14,21 +18,20 @@ const About = lazy(() => import("./pages/about/about.jsx"))
 
 
 
-class App extends Component {
-  render() {
-    return (
-      <Fragment>
-        <Header />
-        <Suspense fallback={<Loading />}>
-          <Route exact path="/" component={About} />
-          <Route exact path="/homepage" component={HomePage} />
-          <Route exact path="/rockets" component={Rockets} />
-          <Route exact path="/missions" component={Missions} />
-          <Route exact path="/information" component={Info} />
-        </Suspense>
-      </Fragment>
-    )
-  }
+const App = () => {
+  return (
+    <Fragment>
+      <Header />
+      <Suspense fallback={<Loading />}>
+        <Route exact path="/" component={About} />
+        <Route exact path="/homepage" component={HomePage} />
+        <Route exact path="/rockets" component={Rockets} />
+        <Route exact path="/missions" component={Missions} />
+        <Route exact path="/information" component={Info} />
+      </Suspense>
+    </Fragment>
+  )
+
 }
 
 export default App;
