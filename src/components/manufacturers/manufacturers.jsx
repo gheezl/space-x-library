@@ -4,7 +4,7 @@ const Manufacturers = ({ manufacturers }) => {
     return (
         <Fragment>
             <h2 className="title">Manufacturers</h2>
-            <div className="manufacturers">
+            <div className="middle-column">
                 {manufacturers}
             </div>
         </Fragment>

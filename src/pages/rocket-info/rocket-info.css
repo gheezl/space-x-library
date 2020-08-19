@@ -1,3 +1,8 @@
+.name {
+    display: flex;
+    justify-content: center;
+}
+
 .information {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -10,7 +15,7 @@
     justify-content: center;
 }
 
-.description {
+.left-column {
     display: flex;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -29,11 +34,29 @@
     font-size: 25px;
 }
 
-.manufacturers {
+.middle-column {
     display: flex;
     justify-content: center;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
+}
+
+.right-column {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.left-column-second-row {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
 }
