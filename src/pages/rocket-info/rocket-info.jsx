@@ -6,12 +6,7 @@ import { SelectData } from "../../redux/data/data-selectors.js"
 
 import "./info.css"
 
-const Wikipedia = lazy(() => import("../../components/wikipedia/wikipedia.jsx"))
-const Description = lazy(() => import("../../components/description/description.jsx"))
-const CostPerLaunch = lazy(() => import("../../components/cost-per-launch/cost-per-launch.jsx"))
-const Country = lazy(() => import("../../components/country/country.jsx"))
-const Diameter = lazy(() => import("../../components/diameter/diameter.jsx"))
-const IsActive = lazy(() => import("../../components/is-active/is-active.jsx"))
+const InfoCard = lazy(() => import("../../components/info-card/info-card.jsx"))
 
 
 const RocketInfo = ({ data }) => {
@@ -26,12 +21,12 @@ const RocketInfo = ({ data }) => {
                                 {data.data.name}
                             </h1>
                             <div className="information">
-                                <Description description={data.data.description} />
-                                <Wikipedia wikipedia={data.data.wikipedia} />
-                                <CostPerLaunch costPerLaunch={data.data.cost_per_launch} />
-                                <Country country={data.data.country} />
-                                <Diameter diameter={data.data.diameter} />
-                                <IsActive isActive={data.data.active} />
+                                <InfoCard info={data.data.description} name="Description" position="left-column" />
+                                <InfoCard link={data.data.wikipedia} name="Wikipedia" position="middle-column-second-row" />
+                                <InfoCard info={`${data.data.cost_per_launch} USD`} name="Cost Per Launch" position="middle-row" />
+                                <InfoCard info={data.data.country} name="Nation" position="right-row" />
+                                <InfoCard info={`${data.data.diameter.meters} meters`} name="Diameter" position="right-row-second-column" />
+                                <InfoCard info={data.data.active ? ("is active") : ("is not active")} name="Active" position="left-column-second-row" />
                             </div>
                         </Fragment>
                     )

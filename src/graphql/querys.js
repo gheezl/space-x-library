@@ -33,7 +33,7 @@ export const LAUNCH_PADS = gql`
     {
     launchpads {
     location {
-      name
+      region
     }
     details
     name

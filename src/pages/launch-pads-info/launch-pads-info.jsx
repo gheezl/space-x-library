@@ -6,10 +6,7 @@ import { SelectData } from "../../redux/data/data-selectors.js"
 
 import "../rocket-info/info.css"
 
-const Wikipedia = lazy(() => import("../../components/wikipedia/wikipedia.jsx"))
-const Description = lazy(() => import("../../components/description/description.jsx"))
 const InfoCard = lazy(() => import("../../components/info-card/info-card.jsx"))
-
 
 const LaunchPadsInfo = ({ data }) => {
     console.log(data)
@@ -23,9 +20,11 @@ const LaunchPadsInfo = ({ data }) => {
                                 {data.data.name}
                             </h1>
                             <div className="information">
-                                <Description description={data.data.details} />
+                                <InfoCard info={data.data.details} name="Description" position="left-column" />
                                 <InfoCard link={data.data.wikipedia} name="Wikipedia" position="middle-column" />
                                 <InfoCard info={data.data.successful_launches} name="Successful Launches" position="right-column" />
+                                <InfoCard info={data.data.status} name="Status" position="left-column-second-row" />
+                                <InfoCard info={data.data.location.region} name="Location" position="middle-column-second-row" />
                             </div>
                         </Fragment>
                     )
