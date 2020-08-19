@@ -13,11 +13,20 @@ const Card = ({ data, history, setData, name }) => {
         setData(data)
         history.push(`/${name}-information`)
     }
+    console.log(data)
 
     return (
         <Fragment>
             <div className="card-border">
-                <span onClick={onClickFunction}>{data.name}</span>
+                {
+                    data.name
+                        ? (
+                            <span onClick={onClickFunction}>{data.name}</span>
+                        )
+                        : (
+                            <span onClick={onClickFunction}>{data.mission_name}</span>
+                        )
+                }
             </div>
         </Fragment>
     )

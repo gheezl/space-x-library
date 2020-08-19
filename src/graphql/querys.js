@@ -43,3 +43,18 @@ export const LAUNCH_PADS = gql`
   }
 }
 `
+
+export const LAUNCHES = gql`
+    {
+    launches {
+        details
+        launch_success
+        launch_year
+        mission_name
+        rocket {
+          rocket_name
+        }
+        upcoming
+    }
+}
+`
