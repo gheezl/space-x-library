@@ -3,14 +3,14 @@ import { useQuery } from '@apollo/react-hooks'
 
 import './rockets.css';
 
-import { ROCKET_INFO } from "../../graphql/querys.js"
+import { ROCKETS } from "../../graphql/querys.js"
 import Loading from "../../components/loading/loading"
 
 const Card = lazy(() => import("../../components/card/card.jsx"))
 
 
 const Rockets = () => {
-    const { loading, error, data } = useQuery(ROCKET_INFO)
+    const { loading, error, data } = useQuery(ROCKETS)
 
     if (loading) return <Loading />
     if (error) return "ERROR"
@@ -20,7 +20,7 @@ const Rockets = () => {
             <div className="rocket-border">
                 {
                     data.rockets.map(rocket => (
-                        <Card data={rocket} key={rocket.name} />
+                        <Card data={rocket} key={rocket.name} name={"rockets"} />
                     ))
                 }
             </div>

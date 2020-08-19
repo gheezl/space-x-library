@@ -1,6 +1,6 @@
 import { gql } from "apollo-boost"
 
-export const ROCKET_INFO = gql`
+export const ROCKETS = gql`
     {
         rockets {
             active
@@ -18,14 +18,28 @@ export const ROCKET_INFO = gql`
     }
 `
 
-export const MISSION_INFO = gql`
+export const MISSIONS = gql`
     {
     missions {
         description
-        id
         name
         wikipedia
         manufacturers
   }
     }
+`
+
+export const LAUNCH_PADS = gql`
+    {
+    launchpads {
+    location {
+      name
+    }
+    details
+    name
+    wikipedia
+    successful_launches
+    status
+  }
+}
 `

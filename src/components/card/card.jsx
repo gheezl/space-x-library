@@ -7,11 +7,11 @@ import "./card.css"
 import { setData } from "../../redux/data/data-actions.js"
 
 
-const Card = ({ data, history, setData }) => {
+const Card = ({ data, history, setData, name }) => {
 
     const onClickFunction = () => {
         setData(data)
-        history.push("/information")
+        history.push(`/${name}-information`)
     }
 
     return (

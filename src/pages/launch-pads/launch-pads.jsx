@@ -1,27 +1,26 @@
 import React, { Fragment, lazy } from "react"
 import { useQuery } from '@apollo/react-hooks'
 
-import "./mission.css"
+import "./launch-pads.css"
 
-import { MISSIONS } from "../../graphql/querys.js"
+import { LAUNCH_PADS } from "../../graphql/querys.js"
 import Loading from "../../components/loading/loading"
 
 const Card = lazy(() => import("../../components/card/card.jsx"))
 
 
-const Missions = () => {
-    const { loading, error, data } = useQuery(MISSIONS)
+const LaunchPads = () => {
+    const { loading, error, data } = useQuery(LAUNCH_PADS)
 
     if (loading) return <Loading />
     if (error) return "ERROR"
 
-    console.log(data)
     return (
         <Fragment>
-            <div className="mission-border">
+            <div className="launch-pad-border">
                 {
-                    data.missions.map(mission => (
-                        <Card data={mission} key={mission.name} name={"missions"} />
+                    data.launchpads.map(launchpad => (
+                        <Card data={launchpad} key={launchpad.name} name={"launchpads"} />
                     ))
                 }
             </div>
@@ -29,4 +28,4 @@ const Missions = () => {
     )
 }
 
-export default Missions;
+export default LaunchPads;

@@ -17,6 +17,11 @@ const HomePage = () => {
                         <span>Missions</span>
                     </Link>
                 </div>
+                <div className="link">
+                    <Link to="/launch-pads" >
+                        <span>Launch Pads</span>
+                    </Link>
+                </div>
             </div>
         </Fragment>
     )
