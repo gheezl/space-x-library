@@ -17,7 +17,8 @@ const Rockets = () => {
 
     return (
         <Fragment>
-            <div className="rocket-border">
+            <h2 className="cards-title">All Rockets</h2>
+            <div className="mission-border">
                 {
                     data.rockets.map(rocket => (
                         <Card data={rocket} key={rocket.name} name={"rockets"} />

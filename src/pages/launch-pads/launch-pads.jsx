@@ -17,6 +17,7 @@ const LaunchPads = () => {
 
     return (
         <Fragment>
+            <h2 className="cards-title">All Launch Pads</h2>
             <div className="launch-pad-border">
                 {
                     data.launchpads.map(launchpad => (

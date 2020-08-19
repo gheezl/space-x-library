@@ -15,7 +15,6 @@ const Launches = () => {
     if (loading) return <Loading />
     if (error) return "ERROR"
 
-    console.log(data)
     return (
         <Fragment>
             <h2 className="launches">All Launches</h2>

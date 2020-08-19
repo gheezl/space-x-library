@@ -16,6 +16,7 @@ const Launches = lazy(() => import("./pages/launches/launches.jsx"))
 const RocketInfo = lazy(() => import("./pages/rocket-info/rocket-info.jsx"))
 const MissionsInfo = lazy(() => import("./pages/missions-info/missions-info.jsx"))
 const LaunchPadsInfo = lazy(() => import("./pages/launch-pads-info/launch-pads-info.jsx"))
+const LaunchInfo = lazy(() => import("./pages/launches-info/launches-info.jsx"))
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route exact path="/rockets-information" component={RocketInfo} />
         <Route exact path="/missions-information" component={MissionsInfo} />
         <Route exact path="/launchpads-information" component={LaunchPadsInfo} />
+        <Route exact path="/launches-information" component={LaunchInfo} />
 
       </Suspense>
     </Fragment>

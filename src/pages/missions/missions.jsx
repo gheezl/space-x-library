@@ -18,6 +18,7 @@ const Missions = () => {
     console.log(data)
     return (
         <Fragment>
+            <h2 className="cards-title">All Missions</h2>
             <div className="mission-border">
                 {
                     data.missions.map(mission => (

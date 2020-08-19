@@ -13,7 +13,6 @@ const Card = ({ data, history, setData, name }) => {
         setData(data)
         history.push(`/${name}-information`)
     }
-    console.log(data)
 
     return (
         <Fragment>
