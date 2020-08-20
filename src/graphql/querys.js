@@ -88,3 +88,17 @@ export const DRAGONS = gql`
     }
     }
 `
+
+export const SHIPS = gql`
+    {
+    ships {
+        active
+        name
+        status
+        url
+        year_built
+        home_port
+    }
+}
+
+`
