@@ -9,6 +9,7 @@ const HomePage = () => {
     let [toggleLaunchPads, setToggleLaunchPads] = useState(false)
     let [toggleLaunches, setToggleLaunches] = useState(false)
     let [toggleLandPads, setToggleLandPads] = useState(false)
+    let [toggleDragons, setToggleDragons] = useState(false)
 
     return (
         <Fragment>
@@ -109,7 +110,7 @@ const HomePage = () => {
                         <span
                             onMouseEnter={() => setToggleLandPads(!toggleLandPads)}
                             onMouseLeave={() => setToggleLandPads(!toggleLandPads)}
-                        >landpads ☷</span>
+                        >Landing Pads ☷</span>
                     </Link>
                     {
                         toggleLandPads
@@ -117,6 +118,27 @@ const HomePage = () => {
                                 <div className="drop-down">
                                     <span>
                                         All of Space X's landing pads
+                                    </span>
+                                </div>
+                            )
+                            : (
+                                null
+                            )
+                    }
+                </div>
+                <div className="link">
+                    <Link to="/dragons">
+                        <span
+                            onMouseEnter={() => setToggleDragons(!toggleDragons)}
+                            onMouseLeave={() => setToggleDragons(!toggleDragons)}
+                        >Dragons ☷</span>
+                    </Link>
+                    {
+                        toggleDragons
+                            ? (
+                                <div className="drop-down">
+                                    <span>
+                                        All of the Space X Dragons
                                     </span>
                                 </div>
                             )

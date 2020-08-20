@@ -8,7 +8,7 @@ import "../rocket-info/info.css"
 
 const InfoCard = lazy(() => import("../../components/info-card/info-card.jsx"))
 
-const LandPadsInfo = ({ data }) => {
+const DragonsInfo = ({ data }) => {
     console.log(data)
     return (
         <Fragment>
@@ -17,14 +17,14 @@ const LandPadsInfo = ({ data }) => {
                     ? (
                         <Fragment>
                             <h1 className="name">
-                                {data.data.full_name}
+                                {data.data.name}
                             </h1>
                             <div className="information">
-                                <InfoCard info={data.data.details} name="Description" position="left-column" />
-                                <InfoCard info={data.data.location.region} name="Location" position="right-column" />
-                                <InfoCard info={data.data.successful_landings} name="Successful Landings" position="middle-column" />
+                                <InfoCard info={data.data.description} name="Description" position="left-column" />
+                                <InfoCard info={data.data.active ? ("Is active") : ("Is not active")} name="Status" position="middle-column" />
+                                <InfoCard info={data.data.crew_capacity} name="Crew Capacity" position="right-column" />
                                 <InfoCard link={data.data.wikipedia} name="Wikipedia" position="middle-column-second-row" />
-                                <InfoCard info={data.data.status} name="Status" position="right-column-second-row" />
+                                <InfoCard info={`${data.data.diameter.meters} meters`} name="Diameter" position="right-column-second-row" />
                             </div>
                         </Fragment>
                     )
@@ -41,4 +41,4 @@ const mapStateToProps = createStructuredSelector({
     data: SelectData
 })
 
-export default connect(mapStateToProps)(LandPadsInfo);
+export default connect(mapStateToProps)(DragonsInfo);

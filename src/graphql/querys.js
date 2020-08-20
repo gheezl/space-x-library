@@ -73,3 +73,18 @@ export const LAND_PADS = gql`
         }
     }
 `
+
+export const DRAGONS = gql`
+    {
+    dragons {
+        active
+        crew_capacity
+        description
+        diameter {
+          meters
+        }
+        name
+        wikipedia
+    }
+    }
+`
