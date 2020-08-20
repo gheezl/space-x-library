@@ -2,13 +2,14 @@ import React, { Fragment, lazy } from "react"
 import { connect } from 'react-redux'
 import { createStructuredSelector } from "reselect"
 
-import { SelectData } from "../../redux/data/data-selectors.js"
+import { SelectData } from "../../../redux/data/data-selectors.js"
 
-import "../rocket-info/info.css"
+import "../../rockets/rocket-info/info.css"
 
-const InfoCard = lazy(() => import("../../components/info-card/info-card.jsx"))
+const InfoCard = lazy(() => import("../../../components/info-card/info-card.jsx"))
 
-const MissionsInfo = ({ data }) => {
+const LaunchPadsInfo = ({ data }) => {
+    console.log(data)
     return (
         <Fragment>
             {
@@ -19,9 +20,11 @@ const MissionsInfo = ({ data }) => {
                                 {data.data.name}
                             </h1>
                             <div className="information">
-                                <InfoCard info={data.data.description} name="Description" position="left-column" />
+                                <InfoCard info={data.data.details} name="Description" position="left-column" />
                                 <InfoCard link={data.data.wikipedia} name="Wikipedia" position="middle-column" />
-                                <InfoCard info={data.data.manufacturers} name="Manufacturers" position="right-row" />
+                                <InfoCard info={data.data.successful_launches} name="Successful Launches" position="right-column" />
+                                <InfoCard info={data.data.status} name="Status" position="left-column-second-row" />
+                                <InfoCard info={data.data.location.region} name="Location" position="middle-column-second-row" />
                             </div>
                         </Fragment>
                     )
@@ -29,6 +32,7 @@ const MissionsInfo = ({ data }) => {
                         null
                     )
             }
+
         </Fragment>
     )
 }
@@ -37,4 +41,4 @@ const mapStateToProps = createStructuredSelector({
     data: SelectData
 })
 
-export default connect(mapStateToProps)(MissionsInfo);
+export default connect(mapStateToProps)(LaunchPadsInfo);

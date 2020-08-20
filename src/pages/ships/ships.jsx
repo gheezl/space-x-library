@@ -18,7 +18,7 @@ const LandPads = () => {
     console.log(data)
     return (
         <Fragment>
-            <h2 className="cards-title">All Dragons</h2>
+            <h2 className="cards-title">All Ships</h2>
             <div className="mission-border">
                 {
                     data.ships.map(ships =>

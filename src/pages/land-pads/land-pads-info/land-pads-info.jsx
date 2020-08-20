@@ -2,11 +2,11 @@ import React, { Fragment, lazy } from "react"
 import { connect } from 'react-redux'
 import { createStructuredSelector } from "reselect"
 
-import { SelectData } from "../../redux/data/data-selectors.js"
+import { SelectData } from "../../../redux/data/data-selectors.js"
 
-import "../rocket-info/info.css"
+import "../../rockets/rocket-info/info.css"
 
-const InfoCard = lazy(() => import("../../components/info-card/info-card.jsx"))
+const InfoCard = lazy(() => import("../../../components/info-card/info-card.jsx"))
 
 const LandPadsInfo = ({ data }) => {
     console.log(data)

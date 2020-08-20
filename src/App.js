@@ -17,13 +17,13 @@ const LandPads = lazy(() => import("./pages/land-pads/land-pads.jsx"))
 const Dragons = lazy(() => import("./pages/dragons/dragons.jsx"))
 const Ships = lazy(() => import("./pages/ships/ships.jsx"))
 
-const RocketInfo = lazy(() => import("./pages/rocket-info/rocket-info.jsx"))
-const MissionsInfo = lazy(() => import("./pages/missions-info/missions-info.jsx"))
-const LaunchPadsInfo = lazy(() => import("./pages/launch-pads-info/launch-pads-info.jsx"))
-const LaunchInfo = lazy(() => import("./pages/launches-info/launches-info.jsx"))
-const LandPadsInfo = lazy(() => import("./pages/land-pads-info/land-pads-info.jsx"))
-const DragonsInfo = lazy(() => import("./pages/dragons-info/dragons-info.jsx"))
-
+const RocketInfo = lazy(() => import("./pages/rockets/rocket-info/rocket-info.jsx"))
+const MissionsInfo = lazy(() => import("./pages/missions/missions-info/missions-info.jsx"))
+const LaunchPadsInfo = lazy(() => import("./pages/launch-pads/launch-pads-info/launch-pads-info.jsx"))
+const LaunchInfo = lazy(() => import("./pages/launches/launches-info/launches-info.jsx"))
+const LandPadsInfo = lazy(() => import("./pages/land-pads/land-pads-info/land-pads-info.jsx"))
+const DragonsInfo = lazy(() => import("./pages/dragons/dragons-info/dragons-info.jsx"))
+const ShipsInfo = lazy(() => import("./pages/ships/ships-info/ships-info.jsx"))
 
 
 const App = () => {
@@ -48,6 +48,7 @@ const App = () => {
         <Route exact path="/launches-information" component={LaunchInfo} />
         <Route exact path="/land-pads-information" component={LandPadsInfo} />
         <Route exact path="/dragons-information" component={DragonsInfo} />
+        <Route exact path="/ships-information" component={ShipsInfo} />
 
       </Suspense>
     </Fragment>
