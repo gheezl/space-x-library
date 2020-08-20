@@ -15,7 +15,6 @@ const LandPads = () => {
     if (loading) return <Loading />
     if (error) return "ERROR"
 
-    console.log(data)
     return (
         <Fragment>
             <h2 className="cards-title">All Landing Pads</h2>

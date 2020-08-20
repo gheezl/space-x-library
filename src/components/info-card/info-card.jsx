@@ -12,7 +12,7 @@ const InfoCard = ({ info, name, position, link }) => {
                         link
                             ? (
                                 <span className="title">
-                                    <a href={link}>See the {name} page</a>
+                                    <a href={link}>Go to the {name} page › </a>
                                 </span>
                             )
                             : (

@@ -15,7 +15,6 @@ const Missions = () => {
     if (loading) return <Loading />
     if (error) return "ERROR"
 
-    console.log(data)
     return (
         <Fragment>
             <h2 className="cards-title">All Missions</h2>

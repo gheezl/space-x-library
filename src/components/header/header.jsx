@@ -7,12 +7,14 @@ import './header.css';
 const Header = () => {
     return (
         <Fragment>
-            <div className="header">
-                <div className="header-title">
-                    <span >SPACE X WIKI</span>
-                </div>
-                <div className="about">
-                    <Link to="/">About ☰</Link>
+            <div className="header-boundary">
+                <div className="header">
+                    <div className="header-title">
+                        <span >SPACE X WIKI</span>
+                    </div>
+                    <div className="about">
+                        <Link to="/">About ☰</Link>
+                    </div>
                 </div>
             </div>
         </Fragment>

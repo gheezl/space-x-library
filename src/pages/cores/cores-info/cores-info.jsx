@@ -9,7 +9,6 @@ import "../../rockets/rocket-info/info.css"
 const InfoCard = lazy(() => import("../../../components/info-card/info-card.jsx"))
 
 const CoresInfo = ({ data }) => {
-    console.log(data)
     return (
         <Fragment>
             {

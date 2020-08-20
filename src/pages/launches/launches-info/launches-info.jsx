@@ -9,7 +9,6 @@ import "../../rockets/rocket-info/info.css"
 const InfoCard = lazy(() => import("../../../components/info-card/info-card.jsx"))
 
 const LaunchInfo = ({ data }) => {
-    console.log(data)
     return (
         <Fragment>
             {
@@ -17,7 +16,7 @@ const LaunchInfo = ({ data }) => {
                     ? (
                         <Fragment>
                             <h1 className="name">
-                                {data.data.name}
+                                {data.data.mission_name}
                             </h1>
                             <div className="information">
                                 <InfoCard info={data.data.details ? (data.data.details) : ("No description availiable")} name="Description" position="left-column" />

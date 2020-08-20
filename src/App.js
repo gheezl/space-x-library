@@ -5,6 +5,7 @@ import './App.css';
 
 import Header from "./components/header/header.jsx"
 import Loading from "./components/loading/loading.jsx"
+import FixedAppBoundary from "./components/fixed-app-boundary/fixed-app-boundary.jsx"
 
 const About = lazy(() => import("./pages/about/about.jsx"))
 const HomePage = lazy(() => import("./pages/homepage/homepage.jsx"))
@@ -34,31 +35,33 @@ const App = () => {
   return (
     <Fragment>
       <Header />
-      <Suspense fallback={<Loading />}>
-        <Route exact path="/" component={About} />
-        <Route exact path="/homepage" component={HomePage} />
+      <FixedAppBoundary>
+        <Suspense fallback={<Loading />}>
 
-        <Route exact path="/rockets" component={Rockets} />
-        <Route exact path="/missions" component={Missions} />
-        <Route exact path="/launchpads" component={LaunchPads} />
-        <Route exact path="/launches" component={Launches} />
-        <Route exact path="/landpads" component={LandPads} />
-        <Route exact path="/dragons" component={Dragons} />
-        <Route exact path="/ships" component={Ships} />
-        <Route exact path="/capsules" component={Capsules} />
-        <Route exact path="/cores" component={Cores} />
+          <Route exact path="/" component={About} />
+          <Route exact path="/homepage" component={HomePage} />
 
-        <Route path="/rockets-information" component={RocketInfo} />
-        <Route path="/missions-information" component={MissionsInfo} />
-        <Route path="/launchpads-information" component={LaunchPadsInfo} />
-        <Route path="/launches-information" component={LaunchInfo} />
-        <Route path="/landpads-information" component={LandPadsInfo} />
-        <Route path="/dragons-information" component={DragonsInfo} />
-        <Route path="/ships-information" component={ShipsInfo} />
-        <Route path="/capsules-information" component={CapsulesInfo} />
-        <Route path="/cores-information" component={CoresInfo} />
+          <Route exact path="/rockets" component={Rockets} />
+          <Route exact path="/missions" component={Missions} />
+          <Route exact path="/launchpads" component={LaunchPads} />
+          <Route exact path="/launches" component={Launches} />
+          <Route exact path="/landpads" component={LandPads} />
+          <Route exact path="/dragons" component={Dragons} />
+          <Route exact path="/ships" component={Ships} />
+          <Route exact path="/capsules" component={Capsules} />
+          <Route exact path="/cores" component={Cores} />
 
-      </Suspense>
+          <Route path="/rockets-information" component={RocketInfo} />
+          <Route path="/missions-information" component={MissionsInfo} />
+          <Route path="/launchpads-information" component={LaunchPadsInfo} />
+          <Route path="/launches-information" component={LaunchInfo} />
+          <Route path="/landpads-information" component={LandPadsInfo} />
+          <Route path="/dragons-information" component={DragonsInfo} />
+          <Route path="/ships-information" component={ShipsInfo} />
+          <Route path="/capsules-information" component={CapsulesInfo} />
+          <Route path="/cores-information" component={CoresInfo} />
+        </Suspense>
+      </FixedAppBoundary>
     </Fragment>
   )
 

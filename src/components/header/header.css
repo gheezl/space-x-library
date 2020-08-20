@@ -1,3 +1,10 @@
+.header-boundary {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
