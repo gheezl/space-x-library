@@ -40,9 +40,9 @@ const App = () => {
 
         <Route exact path="/rockets" component={Rockets} />
         <Route exact path="/missions" component={Missions} />
-        <Route exact path="/launch-pads" component={LaunchPads} />
+        <Route exact path="/launchpads" component={LaunchPads} />
         <Route exact path="/launches" component={Launches} />
-        <Route exact path="/land-pads" component={LandPads} />
+        <Route exact path="/landpads" component={LandPads} />
         <Route exact path="/dragons" component={Dragons} />
         <Route exact path="/ships" component={Ships} />
         <Route exact path="/capsules" component={Capsules} />
@@ -52,7 +52,7 @@ const App = () => {
         <Route path="/missions-information" component={MissionsInfo} />
         <Route path="/launchpads-information" component={LaunchPadsInfo} />
         <Route path="/launches-information" component={LaunchInfo} />
-        <Route path="/land-pads-information" component={LandPadsInfo} />
+        <Route path="/landpads-information" component={LandPadsInfo} />
         <Route path="/dragons-information" component={DragonsInfo} />
         <Route path="/ships-information" component={ShipsInfo} />
         <Route path="/capsules-information" component={CapsulesInfo} />
