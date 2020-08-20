@@ -17,15 +17,7 @@ const Card = ({ data, history, setData, name }) => {
     return (
         <Fragment>
             <div className="card-border">
-                {
-                    data.name
-                        ? (
-                            <span onClick={onClickFunction}>{data.name}</span>
-                        )
-                        : (
-                            <span onClick={onClickFunction}>{data.mission_name || data.full_name}</span>
-                        )
-                }
+                <span onClick={onClickFunction}>{data.name || data.mission_name || data.full_name || data.id}</span>
             </div>
         </Fragment>
     )

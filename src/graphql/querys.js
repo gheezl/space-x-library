@@ -102,3 +102,22 @@ export const SHIPS = gql`
 }
 
 `
+
+export const CAPSULES = gql`
+{
+  capsules {
+    dragon {
+      name
+    }
+    landings
+    missions {
+      name
+    }
+    status
+    type
+    reuse_count
+    original_launch
+    id
+  }
+}
+`
