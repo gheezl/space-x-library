@@ -121,3 +121,18 @@ export const CAPSULES = gql`
   }
 }
 `
+
+export const CORES = gql`
+    {
+    cores {
+       id
+        missions {
+        name
+        }
+        status
+        water_landing
+        reuse_count
+        original_launch
+    }
+}
+`

@@ -12,6 +12,7 @@ const HomePage = () => {
     let [toggleDragons, setToggleDragons] = useState(false)
     let [toggleShips, setToggleShips] = useState(false)
     let [toggleCapsules, setToggleCapsules] = useState(false)
+    let [toggleCores, setToggleCores] = useState(false)
 
     return (
         <Fragment>
@@ -112,6 +113,18 @@ const HomePage = () => {
                             <span>
                                 All of the Space X Capsules
                                     </span>
+                        </div>)
+                        : (null)}
+                </div>
+                <div className="link">
+                    <Link to="/cores">
+                        <span onMouseEnter={() => setToggleCores(!toggleCores)} onMouseLeave={() => setToggleCores(!toggleCores)}>Cores ☷</span>
+                    </Link>
+                    {toggleCores
+                        ? (<div className="drop-down">
+                            <span>
+                                All of the Space X Cores
+                            </span>
                         </div>)
                         : (null)}
                 </div>
