@@ -8,13 +8,17 @@
 }
 
 .card-border:hover {
-    box-shadow: 2px 2px lightblue;
+    text-decoration: 2px underline lightblue;
 }
 
 @media only screen and (max-width: 800px) {
     .card-border {
+        display: flex;
+        justify-content: left;
         font-size: 15px;
         padding: 10px;
         margin-top: 25px;
+        margin-right: 90px;
+        text-decoration: 2px underline lightblue;
     }
 }

@@ -1,7 +1,7 @@
 import React, { Fragment, lazy } from 'react';
 import { useQuery } from '@apollo/react-hooks'
 
-import './rockets.css';
+import "../missions/mission.css"
 
 import { ROCKETS } from "../../graphql/querys.js"
 import Loading from "../../components/loading/loading"

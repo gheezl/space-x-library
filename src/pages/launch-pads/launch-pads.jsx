@@ -1,7 +1,7 @@
 import React, { Fragment, lazy } from "react"
 import { useQuery } from '@apollo/react-hooks'
 
-import "./launch-pads.css"
+import "../missions/mission.css"
 
 import { LAUNCH_PADS } from "../../graphql/querys.js"
 import Loading from "../../components/loading/loading"
@@ -18,7 +18,7 @@ const LaunchPads = () => {
     return (
         <Fragment>
             <h2 className="cards-title">All Launch Pads</h2>
-            <div className="launch-pad-border">
+            <div className="mission-border">
                 {
                     data.launchpads.map(launchpad => (
                         <Card data={launchpad} key={launchpad.name} name={"launchpads"} />
