@@ -17,7 +17,7 @@
   50%{
     transform:rotatez(180deg);
     border-style:dashed;
-    border-color:white whitesmoke white whitesmoke;
+    border-color:white lightblue white lightblue;
   }
   100%{
     transform:rotatez(360deg);
@@ -25,7 +25,7 @@
 }
 .loader10::before{
   content:"";
-  color:red;
+  color:white;
   height:50px;
   width:50px;
   background:transparent;

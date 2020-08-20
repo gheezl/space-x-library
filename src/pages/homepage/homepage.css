@@ -24,11 +24,11 @@
     margin-top: 75px;
 }
 
-.all-rockets {
+.drop-down {
     display: flex;
     position: absolute;
     margin-top: 40px;
-    box-shadow: 1px 1px black;
+    box-shadow: 1px 1px lightblue;
     padding: 10px;
     font-size: 20px;
 }

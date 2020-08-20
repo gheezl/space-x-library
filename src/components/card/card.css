@@ -4,4 +4,9 @@
     padding: 35px;
     font-size: 19px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.card-border:hover {
+    box-shadow: 2px 2px lightblue;
 }

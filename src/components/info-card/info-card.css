@@ -1,0 +1,7 @@
+.info-card {
+    transition: 0.5s;
+}
+
+.info-card:hover {
+    box-shadow: 2px 2px lightblue;
+}

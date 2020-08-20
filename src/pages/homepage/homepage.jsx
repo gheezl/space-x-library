@@ -7,6 +7,7 @@ const HomePage = () => {
     let [toggleRockets, setToggleRockets] = useState(false)
     let [toggleMissions, setToggleMissions] = useState(false)
     let [toggleLaunchPads, setToggleLaunchPads] = useState(false)
+    let [toggleLaunches, setToggleLaunches] = useState(false)
 
     return (
         <Fragment>
@@ -26,7 +27,7 @@ const HomePage = () => {
                     {
                         toggleRockets
                             ? (
-                                <div className="all-rockets">
+                                <div className="drop-down">
                                     <span>
                                         All of the Space X rockets
                                     </span>
@@ -49,7 +50,7 @@ const HomePage = () => {
                     {
                         toggleMissions
                             ? (
-                                <div className="all-rockets">
+                                <div className="drop-down">
                                     <span>
                                         All of Space X's missions
                                     </span>
@@ -70,7 +71,7 @@ const HomePage = () => {
                     {
                         toggleLaunchPads
                             ? (
-                                <div className="all-rockets">
+                                <div className="drop-down">
                                     <span>
                                         All of the Space X launch pads
                                     </span>
@@ -83,8 +84,24 @@ const HomePage = () => {
                 </div>
                 <div className="link">
                     <Link to="/launches">
-                        <span>Launches ☷</span>
+                        <span
+                            onMouseEnter={() => setToggleLaunches(!toggleLaunches)}
+                            onMouseLeave={() => setToggleLaunches(!toggleLaunches)}
+                        >Launches ☷</span>
                     </Link>
+                    {
+                        toggleLaunches
+                            ? (
+                                <div className="drop-down">
+                                    <span>
+                                        All of Space X's rocket launches
+                                    </span>
+                                </div>
+                            )
+                            : (
+                                null
+                            )
+                    }
                 </div>
             </div>
         </Fragment>
