@@ -25,12 +25,12 @@
 }
 .loader10::before{
   content:"";
-  color:white;
+  color:whitesmoke;
   height:50px;
   width:50px;
   background:transparent;
   border-radius:50%;
-  border:20px solid black;
+  border:20px solid lightblue;
   animation:load10 1s infinite;
 }
 

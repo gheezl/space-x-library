@@ -23,7 +23,7 @@ const Card = ({ data, history, setData, name }) => {
                             <span onClick={onClickFunction}>{data.name}</span>
                         )
                         : (
-                            <span onClick={onClickFunction}>{data.mission_name}</span>
+                            <span onClick={onClickFunction}>{data.mission_name || data.full_name}</span>
                         )
                 }
             </div>

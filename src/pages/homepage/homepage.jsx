@@ -8,6 +8,7 @@ const HomePage = () => {
     let [toggleMissions, setToggleMissions] = useState(false)
     let [toggleLaunchPads, setToggleLaunchPads] = useState(false)
     let [toggleLaunches, setToggleLaunches] = useState(false)
+    let [toggleLandPads, setToggleLandPads] = useState(false)
 
     return (
         <Fragment>
@@ -95,6 +96,27 @@ const HomePage = () => {
                                 <div className="drop-down">
                                     <span>
                                         All of Space X's rocket launches
+                                    </span>
+                                </div>
+                            )
+                            : (
+                                null
+                            )
+                    }
+                </div>
+                <div className="link">
+                    <Link to="/land-pads">
+                        <span
+                            onMouseEnter={() => setToggleLandPads(!toggleLandPads)}
+                            onMouseLeave={() => setToggleLandPads(!toggleLandPads)}
+                        >landpads ☷</span>
+                    </Link>
+                    {
+                        toggleLandPads
+                            ? (
+                                <div className="drop-down">
+                                    <span>
+                                        All of Space X's landing pads
                                     </span>
                                 </div>
                             )

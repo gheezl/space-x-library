@@ -58,3 +58,18 @@ export const LAUNCHES = gql`
     }
 }
 `
+
+export const LAND_PADS = gql`
+    {
+    landpads {
+        details
+        full_name
+        location {
+            region
+        }
+        status
+        successful_landings
+        wikipedia
+        }
+    }
+`
