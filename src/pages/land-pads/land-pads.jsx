@@ -23,7 +23,7 @@ const LandPads = () => {
                 {
                     data.landpads.map(landpad =>
                         (
-                            <Card data={landpad} key={landpad.full_name} name="land-pads" />
+                            <Card data={landpad} key={landpad.full_name} name="landpads" />
                         ))
                 }
             </div>

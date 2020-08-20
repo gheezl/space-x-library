@@ -13,3 +13,9 @@
     margin-top: 35px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+    .about-page {
+        padding: 35px;
+    }
+}

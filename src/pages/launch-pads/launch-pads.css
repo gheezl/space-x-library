@@ -9,3 +9,11 @@
     grid-template-rows: 1fr 1fr 1fr;
     margin: 50px
 }
+
+@media only screen and (max-width: 800px) {
+    .launch-pad-border {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        }
+}

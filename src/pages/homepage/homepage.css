@@ -34,12 +34,19 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .all-information {
+        font-size: 20px;
+    }
+
     .links {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     .link {
-        font-size: 20px;
+        display: flex;
+        justify-content: left;
+        font-size: 15px;
+        margin-right: 60px;
     }
 }

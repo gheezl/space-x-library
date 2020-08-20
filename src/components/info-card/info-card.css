@@ -1,0 +1,8 @@
+.info-card-border-color {
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.info-card-border-color:hover {
+    box-shadow: 2px 2px lightblue;
+}

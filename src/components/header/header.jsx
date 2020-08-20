@@ -9,7 +9,7 @@ const Header = () => {
         <Fragment>
             <div className="header">
                 <div className="header-title">
-                    <span >Space X Library</span>
+                    <span >SPACE X WIKI</span>
                 </div>
                 <div className="about">
                     <Link to="/">About ☰</Link>

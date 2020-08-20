@@ -9,7 +9,7 @@ const About = ({ history }) => {
         <Fragment>
             <div className="about-page">
                 <h2>
-                    Hi welcome to the Space X Library
+                    Hi welcome to the Space X Wiki
                 </h2>
                 <span className="text">
                     This is a Library containing all information relavant to the company Space X.

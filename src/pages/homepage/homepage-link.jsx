@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link, Route } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import './homepage.css';
 
@@ -9,7 +9,7 @@ const HomePageLink = ({ toggle, setToggle, name }) => {
         <Fragment>
             <div className="link">
                 <Link to={test} >
-                    <span onMouseEnter={() => setToggle(!toggle)} onMouseLeave={() => setToggle(!toggle)}>{name} ☷</span>
+                    <span onMouseEnter={() => setToggle(!toggle)} onMouseLeave={() => setToggle(!toggle)}>{name} </span>
                 </Link>
                 {toggle
                     ? (<div className="drop-down">
@@ -22,5 +22,5 @@ const HomePageLink = ({ toggle, setToggle, name }) => {
         </Fragment>
     )
 }
-
+//  ☷ ☰
 export default HomePageLink;

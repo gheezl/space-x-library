@@ -22,7 +22,7 @@ const LaunchPadsInfo = ({ data }) => {
                             <div className="information">
                                 <InfoCard info={data.data.details} name="Description" position="left-column" />
                                 <InfoCard link={data.data.wikipedia} name="Wikipedia" position="middle-column" />
-                                <InfoCard info={data.data.successful_launches} name="Successful Launches" position="right-column" />
+                                <InfoCard info={data.data.successful_launches} name="Launches" position="right-column" />
                                 <InfoCard info={data.data.status} name="Status" position="left-column-second-row" />
                                 <InfoCard info={data.data.location.region} name="Location" position="middle-column-second-row" />
                             </div>
