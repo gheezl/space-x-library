@@ -1,11 +1,15 @@
+@font-face {
+font-family: 'Bank Gothic Light';
+font-style: normal;
+font-weight: normal;
+src: local('Bank Gothic Light'), url('ufonts.com_bank-gothic-light.woff') format('woff');
+}
+
 body {
-  font-family: 'Inconsolata', monospace;
-  background-color: white;
-  color: black;
-  text-shadow: 1px 1px whitesmoke;
+  font-family: "Bank Gothic Light";
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none ;
   color: black;
 }

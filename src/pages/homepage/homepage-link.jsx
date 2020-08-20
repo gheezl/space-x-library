@@ -4,7 +4,6 @@ import { Link, Route } from "react-router-dom"
 import './homepage.css';
 
 const HomePageLink = ({ toggle, setToggle, name }) => {
-
     const test = `/${name.toLowerCase()}`
     return (
         <Fragment>
