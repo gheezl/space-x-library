@@ -13,7 +13,7 @@ const Rockets = () => {
     const { loading, error, data } = useQuery(ROCKETS)
 
     if (loading) return <Loading />
-    if (error) return "ERROR"
+    if (error) throw Error
 
     return (
         <Fragment>

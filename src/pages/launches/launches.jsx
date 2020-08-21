@@ -13,7 +13,7 @@ const Launches = () => {
     const { loading, error, data } = useQuery(LAUNCHES)
 
     if (loading) return <Loading />
-    if (error) return "ERROR"
+    if (error) throw Error
 
     return (
         <Fragment>

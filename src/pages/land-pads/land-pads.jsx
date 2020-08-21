@@ -13,7 +13,7 @@ const LandPads = () => {
     const { loading, error, data } = useQuery(LAND_PADS)
 
     if (loading) return <Loading />
-    if (error) return "ERROR"
+    if (error) throw Error
 
     return (
         <Fragment>
