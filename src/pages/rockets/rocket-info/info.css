@@ -97,6 +97,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .title {
+        font-size: 15px;
+    }
+
     .name {
         padding: 15px;
         font-size: 15px;
