@@ -1,3 +1,8 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
 .about-page {
     display: flex;
     flex-direction: column;
@@ -25,5 +30,9 @@
 @media only screen and (max-width: 800px) {
     .about-page {
         padding: 35px;
+    }
+
+    .welcome {
+        font-size: 16px;
     }
 }

@@ -7,10 +7,10 @@ import "./about.css"
 const About = ({ history }) => {
     return (
         <Fragment>
-            <div className="about-page">
-                <h2>
-                    Hi welcome to the Space X Wiki
+            <h2 className="welcome">
+                Hi welcome to the Space X Wiki
                 </h2>
+            <div className="about-page">
                 <span className="text">
                     This is a Library containing all information relavant to the company Space X.
                 </span>
