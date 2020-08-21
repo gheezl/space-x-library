@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 30px;
     background-color: whitesmoke;
-    box-shadow: 1px 1px lightblue;
+    box-shadow: 2px 2px lightblue;
 }
 
 .header-title {

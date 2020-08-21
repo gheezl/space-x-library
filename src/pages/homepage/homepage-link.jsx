@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 import './homepage.css';
 
 const HomePageLink = ({ toggle, setToggle, name }) => {
-    const test = `/${name.toLowerCase()}`
+    const link = `/${name.toLowerCase()}`
     return (
         <Fragment>
             <div className="link">
-                <Link to={test} >
+                <Link to={link} >
                     <span onMouseEnter={() => setToggle(!toggle)} onMouseLeave={() => setToggle(!toggle)}>{name} </span>
                 </Link>
                 {toggle
@@ -22,5 +22,5 @@ const HomePageLink = ({ toggle, setToggle, name }) => {
         </Fragment>
     )
 }
-//  ☷ ☰
+
 export default HomePageLink;

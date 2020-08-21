@@ -1,0 +1,14 @@
+.error {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-title {
+    display: flex;
+    justify-content: center;
+}
+
+.error-message {
+    display: flex;
+    justify-content: center;
+}
