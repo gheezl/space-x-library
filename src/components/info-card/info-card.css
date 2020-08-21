@@ -1,7 +1,6 @@
 .why {
     display: flex;
     justify-content: center;
-    border: black 1px solid;
     padding: 10px;
 }
 
