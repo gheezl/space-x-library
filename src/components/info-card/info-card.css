@@ -1,3 +1,9 @@
+.why {
+    display: flex;
+    justify-content: center;
+    border: black 1px solid;
+}
+
 .info-card-border-color {
     padding: 15px;
     transition: 0.5s;

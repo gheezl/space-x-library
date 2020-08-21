@@ -16,7 +16,7 @@ const InfoCard = ({ info, name, position, link }) => {
                                 </span>
                             )
                             : (
-                                <span className="title">
+                                <span className="why">
                                     {info}
                                 </span>
                             )
